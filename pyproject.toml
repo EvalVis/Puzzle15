@@ -1,0 +1,10 @@
+[project]
+name = "puzzle15"
+version = "1.0.0"
+description = "15 Puzzle lib to make NxM - 1 puzzles"
+readme = "README.md"
+requires-python = ">=3.12"
+
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
