@@ -8,6 +8,8 @@ Allows making custom width and height puzzles.
 
 Puzzles can be randomly generated or given as input.
 
+Known clients: [![GitHub](https://img.shields.io/badge/GitHub-EvalVis/Puzzle15Gym-black?style=flat&logo=github)](https://github.com/EvalVis/Puzzle1Gym).
+
 ## Functionality
 - Create N x M puzzle
     - Random puzzle from given width and height.
