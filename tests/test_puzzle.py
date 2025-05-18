@@ -20,13 +20,13 @@ def test_puzzle_from_dimensions():
     puzzle = Puzzle.from_dimensions(3, 3)
     assert puzzle.height == 3
     assert puzzle.width == 3
-    assert puzzle.is_solvable()
+    assert puzzle._is_solvable()
 
     # Test 4x4 puzzle generation
     puzzle = Puzzle.from_dimensions(4, 4)
     assert puzzle.height == 4
     assert puzzle.width == 4
-    assert puzzle.is_solvable()
+    assert puzzle._is_solvable()
 
 def test_puzzle_from_string():
     # Test valid puzzle string
@@ -44,12 +44,12 @@ def test_is_solvable():
     # Test solvable puzzle
     grid = [[1, 2, 3], [4, 5, 6], [7, 8, -1]]
     puzzle = Puzzle(grid)
-    assert puzzle.is_solvable()
+    assert puzzle._is_solvable()
 
     # Test unsolvable puzzle
     grid = [[2, 1, 3], [4, 5, 6], [7, 8, -1]]
     puzzle = Puzzle(grid)
-    assert not puzzle.is_solvable()        
+    assert not puzzle._is_solvable()        
 
 def test_possible_moves():
     # Test moves in center position
