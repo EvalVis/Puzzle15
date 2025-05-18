@@ -3,7 +3,7 @@ from typing import List, Tuple
 
 class Puzzle:
     def __init__(self, grid: List[List[int]]):
-        self._grid = grid
+        self._grid = [row.copy() for row in grid]
         self._height = len(grid)
         self._width = len(grid[0])
         self._blank_pos = self._find_blank()
