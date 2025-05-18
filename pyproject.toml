@@ -1,7 +1,7 @@
 [project]
 name = "puzzle15"
 version = "1.0.0"
-description = "15 Puzzle lib to make NxM - 1 puzzles"
+description = "Lib to make NxM - 1 sliding puzzles"
 readme = "README.md"
 requires-python = ">=3.12"
 
