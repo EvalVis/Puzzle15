@@ -1,7 +1,6 @@
 # Puzzle15
 
 [![codecov](https://codecov.io/gh/EvalVis/Puzzle15/branch/main/graph/badge.svg)](https://codecov.io/gh/EvalVis/Puzzle15)
-
 [![PyPI version](https://badge.fury.io/py/puzzle15.svg)](https://pypi.org/project/puzzle15/)
 
 A lib for a sliding block puzzle game: https://en.wikipedia.org/wiki/15_puzzle.
