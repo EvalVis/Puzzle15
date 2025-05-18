@@ -1,7 +1,9 @@
 # Puzzle15
 
 A lib for a sliding block puzzle game: https://en.wikipedia.org/wiki/15_puzzle.
+
 Allows making custom width and height puzzles.
+
 Puzzles can be randomly generated or given as input.
 
 ## Functionality
@@ -51,5 +53,6 @@ else:
 ## Caution
 Please only use `str(puzzle)` method when printing.
 Otherwise make use of `puzzle.grid()` method.
+
 If you couple to `str(puzzle)` and this method will change by introducing different
 formatting or showing the board in a different way, your code will break.
