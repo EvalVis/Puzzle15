@@ -9,7 +9,7 @@ license = {text = "GPL-3.0-or-later"}
 dependencies = []
 
 [project.urls]
-repository = "https://github.com/EvalVis/Puzzle15"
+Repository = "https://github.com/EvalVis/Puzzle15"
 
 [build-system]
 requires = ["setuptools", "wheel"]
