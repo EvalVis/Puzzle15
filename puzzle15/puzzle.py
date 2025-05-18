@@ -15,7 +15,7 @@ class Puzzle:
         random.shuffle(numbers)
         grid = [numbers[i * width:(i + 1) * width] for i in range(height)]
         puzzle = cls(grid)
-        if not puzzle.is_solvable():
+        if not puzzle._is_solvable():
             puzzle._make_solvable()
         return puzzle
 
@@ -24,7 +24,7 @@ class Puzzle:
         rows = puzzle_str.strip().split('|')
         grid = [[int(cell.strip()) for cell in row.strip().split()] for row in rows]
         puzzle = cls(grid)
-        if not puzzle.is_solvable():
+        if not puzzle._is_solvable():
             raise ValueError("The provided puzzle configuration is not solvable.")
         return puzzle
 
@@ -41,7 +41,7 @@ class Puzzle:
         if set(flat_list) != expected_numbers:
             raise ValueError("Puzzle contains duplicates or incorrect numbers.")
 
-    def is_solvable(self) -> bool:
+    def _is_solvable(self) -> bool:
         flat_list = [num for row in self._grid for num in row if num != -1]
         inversions = sum(
             1
