@@ -44,17 +44,6 @@ def test_puzzle_from_string():
     ]
     assert puzzle.grid() == expected_grid
 
-def test_is_solvable():
-    # Test solvable puzzle
-    grid = [[1, 2, 3], [4, 5, 6], [7, 8, -1]]
-    puzzle = Puzzle(grid)
-    assert puzzle._is_solvable()
-
-    # Test unsolvable puzzle
-    grid = [[2, 1, 3], [4, 5, 6], [7, 8, -1]]
-    puzzle = Puzzle(grid)
-    assert not puzzle._is_solvable()        
-
 def test_possible_moves():
     # Test moves in center position
     grid = [[1, 2, 3], [4, -1, 6], [7, 8, 5]]

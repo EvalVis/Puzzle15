@@ -31,7 +31,7 @@ print(puzzle)
 
 # Check possible moves
 moves = puzzle.possible_moves()
-print("Possible moves:", moves)
+print("Possible moves: ", moves)
 
 # Make a move
 if 'up' in puzzle.possible_moves():
