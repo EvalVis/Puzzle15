@@ -1,5 +1,7 @@
 # Puzzle15
 
+[![codecov](https://codecov.io/gh/EvalVis/Puzzle15/branch/main/graph/badge.svg)](https://codecov.io/gh/EvalVis/Puzzle15)
+
 A lib for a sliding block puzzle game: https://en.wikipedia.org/wiki/15_puzzle.
 
 Allows making custom width and height puzzles.
