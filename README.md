@@ -15,8 +15,9 @@ Known clients: [![GitHub](https://img.shields.io/badge/GitHub-EvalVis/Puzzle15Gy
 - Create N x M puzzle
     - Random puzzle from given width and height.
     - Given puzzle from string. Giving unsolvable puzzle causes error.
+    - Note that one of the cells if blank so numbers start from 1 and end in NxM - 1.
 - Check possible moves (up, right, down, left) in the current puzzle position.
-- Make a move.
+- Make a move. If move is invalid no action is taken.
 - See puzzle representation.
 - Check if puzzle is solved.
 
@@ -27,21 +28,26 @@ from puzzle15.puzzle import Puzzle
 
 # Create a 4x4 random puzzle
 puzzle = Puzzle.from_dimensions(4, 4)
-print(puzzle)
 
-# Create a puzzle from a string (use -1 for the blank)
-puzzle_another = "1 2 3 4|5 6 7 8|9 10 11 12|13 14 15 -1"
-puzzle = Puzzle.from_string(puzzle_another)
-print(puzzle)
+# Create a puzzle from a string (use -1 for the blank cell)
+puzzle_str = '1 2 3 4|5 6 7 8|9 10 11 12|13 14 15 -1'
+puzzle = Puzzle.from_string(puzzle_str)
 
 # Check possible moves
 moves = puzzle.possible_moves()
-print("Possible moves: ", moves)
+print('Possible moves: ', moves)
 
-# Make a move
+# Make a valid move
 if 'up' in puzzle.possible_moves():
     puzzle.move('up')
-    print(puzzle)
+
+# Make a random valid move
+import random
+
+moves = puzzle.possible_moves()
+if moves:  # Make sure there are available moves
+    random_move = random.choice(moves)
+    puzzle.move(random_move)
 
 # See puzzle representation
 print(puzzle)
@@ -50,9 +56,9 @@ print(grid)
 
 # Check if puzzle is solved
 if puzzle.is_solved():
-    print("Puzzle is solved!")
+    print('Puzzle is solved!')
 else:
-    print("Puzzle is not solved.")
+    print('Puzzle is not solved.')
 ```
 
 ## Caution
